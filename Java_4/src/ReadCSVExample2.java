@@ -33,13 +33,13 @@ class Subdivision{
 
 public class ReadCSVExample2 {
         public static void main(String[] args) {
-                People people = new People();
                 ArrayList<People> people2 = new ArrayList<People>();
                 String line = "";
                 String splitBy = ";";
                 try {
                         BufferedReader br = new BufferedReader(new FileReader("D:/java/forjava.csv"));
                         while ((line = br.readLine()) != null) {
+                                People people = new People();
                                 String[] employee = line.split(splitBy);
                                 people.id = Integer.parseInt(employee[0]);
                                 people.date = employee[3];
